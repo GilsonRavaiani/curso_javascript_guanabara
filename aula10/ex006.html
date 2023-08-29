@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eventos DOM</title>
   <style>
-    div.area{
+    div#area{
       font: normal 20pt Arial;
       background: rgb(64, 71, 168);
       color: aliceblue;
@@ -26,7 +26,7 @@
   </style>
 </head>
 <body>
-  <div class="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> <!--Configurar métotodo quando clicar chama no script-->
+  <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> <!--Configurar métotodo quando clicar chama no script-->
     Interaja...
   </div></br>
     
@@ -36,7 +36,7 @@
 
 
   <script>
-    var a = window.document.getElementsByClassName('area')[1]
+    var a = window.document.getElementById('area')
     var b = window.document.getElementById('area2') 
      b.addEventListener('click', clicar)
      b.addEventListener('mouseenter', entrar)
@@ -45,18 +45,18 @@
     function clicar(){
      
       a.innerText = 'Clicou!'
-      a.style.background = 'red'
+      a.style.background = 'yellow'
     }
  
     function entrar(){
       a.innerText = 'Entrou!'
-      a.style.background = 'yellow'
+      a.style.background = 'red'
       a.style.color= 'black'
     }
     function sair(){
      
       a.innerText = 'Saiu!'
-      a.style.background= 'green'
+      a.style.background= 'orange'
     }
 
      
@@ -79,32 +79,10 @@
 
   </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <footer>
     <a href="https://developer.mozilla.org/en-US/docs/Web/Events">Event reference</a>
     <img src="./img/mouse.jpg" alt="eventos mouse">
+    <img src="./img/function.jpg" alt="function">
   </footer>
 </body>
 </html>
