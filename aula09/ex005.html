@@ -6,7 +6,8 @@
   <title>Iniciando estudos com DOM</title>
   <style>
     body{
-      background: rgb(102, 108, 189);
+      background: rgb(102, 108, 189);  
+      color: white;   
       font: normal 18 pt Arial;
     }
   </style>  
@@ -18,12 +19,53 @@
   <img src="./img/img09.jpg" alt="arvore dom">
   <img src="./img/img10.jpg" alt="Selecionando">
 
-  <div>Clique em mim</div>
+  <div id="msg">Clique em mim</div>
+
+  <div name="msg">Testando segunda DIV</div>
+
+  <div class="msg">Testando terceira DIV</div>
+
+
   <script>
-    var p1 = window.document.getElementsByTagName('p')[0] //Primeiro parágrafo
+
+    var corpo = window.document.body // Criado variável para controle do body
+
+    var p1 = window.document.getElementsByTagName('p')[1] //Primeiro parágrafo
+
     //window.document.write('Esta escrito assim: '+ p1.innerText)
-    p1.style.color = 'blue'
-    corpo.style.background = 'black'
+
+    p1.style.color = 'blue'// trocando as cores do paragrafo conforme indicação linha 26
+
+    corpo.style.background = 'red'//troca cor de fundo conforme var criada na linha 24
+
+    //window.document.write(p1.innerText) //Pega o texto sem formatação
+
+    //window.document.write(p1.innerHTML) //Já vem formatado
+
+    var d = window.document.getElementById('msg')
+    
+    d.style.background = 'green' // Troca cor de fundo conforme var criada linha 38 referenre a DIV linha 22
+
+    //d.innerText = 'Estou aguardando...' //Troca a msg da variável id = msg linha 22
+
+    //window.document.getElementById('msg').innerText = 'Olá!'
+
+    var e = window.document.getElementsByName('msg')[0] //Criado var para segunda div
+
+    e.innerText = 'Renomeando minha segunda div'// Renomeando segunda DIV para teste linha 24
+
+    e.style.background = 'yellow'// trocando cor de fundo div name linha 24
+
+    e.style.color = 'black' //Trocando cor da fonte div linha 24
+
+    var f =  window.document.getElementsByClassName('msg')[0] // Observação: Tudo que for no plural devemos utilizar [0] referenciando qual elemento é
+
+    f.innerText = 'Renomeando minha terceira DIV' // Renomeando segunda DIV para teste linha 26
+
+    f.style.background = 'gray'// trocando cor de fundo div name linha 26
+
+    
+  
   </script>  
 </body>
 </html>
