@@ -6,7 +6,7 @@
   <title>Iniciando estudos com DOM</title>
   <style>
     body{
-      background: rgb(102, 108, 189);  
+      background: rgb(6, 17, 167);  
       color: white;   
       font: normal 18 pt Arial;
     }
@@ -25,6 +25,10 @@
 
   <div class="msg">Testando terceira DIV</div>
 
+  <div id="msg2">Testando quarta DIV com ID e querySelector</div>
+
+  <div class="msg2">Testando quinta DIV com NAME e querySelector</div>
+
 
   <script>
 
@@ -36,7 +40,7 @@
 
     p1.style.color = 'blue'// trocando as cores do paragrafo conforme indicação linha 26
 
-    corpo.style.background = 'white'//troca cor de fundo conforme var criada na linha 24
+    corpo.style.background = 'rgb(102, 108, 189)'//troca cor de fundo utilizando RGB conforme var criada na linha 24
 
     //window.document.write(p1.innerText) //Pega o texto sem formatação
 
@@ -67,6 +71,22 @@
     f.style.background = 'gray'// trocando cor de fundo div name linha 26
 
     f.style.color = 'blue'
+
+    var g = window.document.querySelector('div#msg2') //Utilizamos # para ID
+
+    g.style.color = 'black'
+
+    g.style.background = 'pink'
+
+    var h = window.document.querySelector('div.msg2') //Utilizamos . para CLASS
+
+    h.style.color = 'white'
+    
+    h.style.background = 'green'
+    
+
+
+
   
   </script>  
 </body>
