@@ -15,15 +15,47 @@
       text-align: center;  
     }
   </style>
+
+
+
 </head>
 <body>
-  <div id="area">
+  <div id="area" onclick="clicar()"> <!--Configurar métotodo quando clicar chama no script-->
     Interaja...
   </div>
+  <div></div>
 
   <script>
+    function clicar(){
+      var a = window.document.getElementById('area') //objeto "a" está ligado direto ao elemento id area dentro do html 
+      a.innerText = 'Clicou!'
+    }
 
   </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <footer>
     <a href="https://developer.mozilla.org/en-US/docs/Web/Events">Event reference</a>
     <img src="./img/mouse.jpg" alt="eventos mouse">
