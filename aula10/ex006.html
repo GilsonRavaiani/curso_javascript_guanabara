@@ -28,18 +28,28 @@
 <body>
   <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()"> <!--Configurar métotodo quando clicar chama no script-->
     Interaja...
-    </div>
+  </div>
+    
+  <div id="area2">
+    Interaja área2
+  </div>  
+
 
   <script>
-     var a = window.document.getElementById('area')  //objeto "a" está ligado direto ao elemento id area dentro do html 
+    var a = window.document.getElementById('area')   
+    var b = window.document.getElementById('area2') 
+     b.addEventListener('click', clicar)
+     b.addEventListener('mouseenter', entrar)
+     b.addEventListener('mouseout', sair)
 
-    //Utilizado var "a" fora da function, veremos futuramente nova forma de fazer todos dentro da function
+     
+    
     function clicar(){
      
       a.innerText = 'Clicou!'
       a.style.background = 'red'
     }
-
+ 
     function entrar(){
       a.innerText = 'Entrou!'
       a.style.background = 'yellow'
@@ -50,6 +60,24 @@
       a.innerText = 'Saiu!'
       a.style.background= 'green'
     }
+
+     
+    function clicar(){
+     
+     b.innerText = 'Clicou!'
+     b.style.background = 'red'
+   }
+
+   function entrar(){
+     b.innerText = 'Entrou!'
+     b.style.background = 'yellow'
+     b.style.color= 'black'
+   }
+   function sair(){
+    
+     b.innerText = 'Saiu!'
+     b.style.background= 'green'
+   }
 
   </script>
 
