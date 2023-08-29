@@ -32,6 +32,7 @@
   <div id="area2" onmouseenter="entrar()" onmouseout="sair()">
     Interaja Área2
   </div>
+
   <script>
     function clicar(){
       var a = window.document.getElementById('area') //objeto "a" está ligado direto ao elemento id area dentro do html 
@@ -42,14 +43,15 @@
     function entrar(){
       var b =  window.document.getElementById('area2')
       b.innerText = 'Entrou!'
-      
+      b.style.background = 'yellow'
+      b.style.color= 'black'
+    }
+    function sair(){
+     
+      b.innerText = 'Saiu!'
+      b.style.background= 'white'
     }
 
-    function saiu(){
-      var c =  window.document.getElementById('area2')
-      c.innerText = 'Saiu!'
-      c.style.background= 'pink'
-    }
 
 
   </script>
